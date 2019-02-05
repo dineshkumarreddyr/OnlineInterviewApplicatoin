@@ -1,0 +1,55 @@
+<div class="register-container">
+  <mat-card class="register-form">
+    <mat-card-title>
+      Register
+    </mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="registerForm">
+        <mat-form-field class="full-width">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="name" placeholder="Full Name" />
+          <mat-error *ngIf="registerForm.get('name').hasError"
+            >Enter your full name</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="email" placeholder="Email Address" />
+          <mat-error *ngIf="registerForm.get('email').hasError"
+            >Enter your email</mat-error
+          >
+        </mat-form-field>
+
+        <mat-radio-group formControlName="gender">
+          <label>Gender</label>
+          <mat-radio-button value="1">Male</mat-radio-button>
+          <mat-radio-button value="2">Female</mat-radio-button>
+          <mat-error
+            *ngIf="
+              registerForm.get('gender').touched &&
+              registerForm.get('gender').hasError
+            "
+            >Select the gender</mat-error
+          >
+        </mat-radio-group>
+
+        <mat-form-field class="full-width">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            formControlName="password"
+            type="password"
+            placeholder="Password"
+          />
+          <mat-error *ngIf="registerForm.get('password').hasError"
+            >Enter your password</mat-error
+          >
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Register</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
