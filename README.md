@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
+# Installation Steps
+
+- Clone the Repository using git tools
+- Install the Node 10.x version
+- Install angular cli of version 7 with following command
+
+  ```sh
+  $ npm install -g @angular/cli
+  ```
+
+- Run the following command
+
+  ```sh
+  $ npm install
+  ```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
